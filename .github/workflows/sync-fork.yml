@@ -1,0 +1,21 @@
+name: Sync Fork with Upstream
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@main
+
+    - name: Sync with Upstream
+      uses: TG908/fork-sync@v1.6.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        owner: cmliu
+        head: main
+        base: main

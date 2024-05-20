@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@main
 
     - name: Sync with Upstream
-      uses: TG908/fork-sync@v1.6.3
+      uses: TG908/fork-sync@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         owner: cmliu

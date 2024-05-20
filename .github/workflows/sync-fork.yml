@@ -15,7 +15,7 @@ jobs:
     - name: Sync with Upstream
       uses: TG908/fork-sync@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         owner: cmliu
         head: main
         base: main

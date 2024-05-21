@@ -25,9 +25,9 @@ jobs:
 
     - name: New commits found
       if: steps.sync.outputs.has_new_commits == 'true'
-      run: echo "::notice file=README.md::🎈New commits were found to sync."
+      run: echo "::notice::🎈New commits were found to sync."
     
     - name: No new commits
       if: steps.sync.outputs.has_new_commits == 'false'
-      run: echo "::notice file=README.md::📭There were no new commits."
+      run: echo "::notice::📭There were no new commits."
       
